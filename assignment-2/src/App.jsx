@@ -32,10 +32,10 @@ const App = () => {
     )
       return;
 
-    // if the user drops within the same column but in a different position
     const sourceColumn = data.columns[source.droppableId];
     const destinationColumn = data.columns[destination.droppableId];
 
+    // if the user drops within the same column but in a different position
     if (sourceColumn.id === destinationColumn.id) {
       const newColumn = reorderColumnList(
         sourceColumn,
@@ -61,12 +61,17 @@ const App = () => {
       ...sourceColumn,
       candidateIds: startCandidateIds,
     };
+
+    // console.log(newStartColumn);
+
     const endCandidateIds = Array.from(destinationColumn.candidateIds);
     endCandidateIds.splice(destination.index, 0, removed);
     const newEndColumn = {
       ...destinationColumn,
       candidateIds: endCandidateIds,
     };
+
+    // console.log(newEndColumn);
 
     const newData = {
       ...data,

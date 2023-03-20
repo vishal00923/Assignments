@@ -18,7 +18,9 @@ export const Main = ({ data, setData }) => {
             return (
               <Stage
                 key={idx}
+                data={data}
                 column={column}
+                setData={setData}
                 candidates={candidates}
                 isRightBorder={false}
               />
@@ -27,7 +29,9 @@ export const Main = ({ data, setData }) => {
           return (
             <Stage
               key={idx}
+              data={data}
               column={column}
+              setData={setData}
               candidates={candidates}
               isRightBorder={true}
             />
