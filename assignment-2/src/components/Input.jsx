@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Input = ({ type, name, label, value, handleChange }) => {
+const Input = ({ type, name, label, value, handleChange }) => {
   return (
     <>
       <input
@@ -22,3 +22,5 @@ export const Input = ({ type, name, label, value, handleChange }) => {
     </>
   );
 };
+
+export default Input;
