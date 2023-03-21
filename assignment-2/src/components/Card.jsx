@@ -3,7 +3,7 @@ import React from 'react';
 import Avatar from './Avatar';
 import { Draggable } from 'react-beautiful-dnd';
 
-const Card = ({ id, name, photo, location, dateApplied, stage, index }) => {
+const Card = ({ id, name, photo, location, date, stage, index }) => {
   return (
     <Draggable draggableId={`${id}`} index={index}>
       {(draggableProvided) => (
@@ -23,7 +23,7 @@ const Card = ({ id, name, photo, location, dateApplied, stage, index }) => {
             <p className='text-sm'>Name: {name}</p>
             <p className='text-sm'>Stage: {stage}</p>
             <p className='text-sm'>Location: {location}</p>
-            <p className='text-sm'>Date Applied: {dateApplied}</p>
+            <p className='text-sm'>Date Applied: {date}</p>
           </div>
         </div>
       )}

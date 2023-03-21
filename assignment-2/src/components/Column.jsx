@@ -23,10 +23,10 @@ const Column = ({ columnData, openModal }) => {
                 id={candidate.id}
                 index={index}
                 name={candidate.name}
+                date={candidate.date}
                 photo={candidate.photo}
                 stage={columnData.name}
                 location={candidate.location}
-                dateApplied={candidate.dateApplied}
               />
             ))}
             {droppableProvided.placeholder}
