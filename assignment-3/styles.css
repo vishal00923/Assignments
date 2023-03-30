@@ -33,7 +33,7 @@ body {
 
 .search img {
   width: 100%;
-  height: 398px;
+  height: 375px;
   object-fit: cover;
   position: absolute;
 }
@@ -66,12 +66,176 @@ body {
 .search-box input {
   width: 100%;
   height: 100%;
-  border: none;
-  outline: none;
   font-size: 1rem;
   font-family: 'Alkatra', cursive;
   padding-left: 55px;
+}
+
+i,
+input,
+button {
+  border: none;
+  outline: none;
   border-radius: 5px;
 }
 
-/* image gallery section */
+/* styles for lightbox section */
+.lightbox {
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.lightbox.show {
+  display: block;
+}
+
+.lightbox .wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  padding: 25px;
+  padding-bottom: 35px;
+  max-width: 798px;
+  background: #fff;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .photographer {
+  color: #000;
+}
+
+header .photographer i {
+  font-size: 1.8rem;
+}
+
+header .photographer span {
+  font-size: 1.125rem;
+}
+
+header .buttons i {
+  width: 38px;
+  height: 38px;
+  font-size: 1.125rem;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 40px;
+  background: #0050bf;
+  display: inline-block;
+}
+
+.buttons i:last-child {
+  margin-left: 8px;
+  background: rgb(215, 0, 0);
+}
+
+.wrapper .preview-img .img {
+  max-width: 90vw;
+  max-height: 65vh;
+}
+
+.preview-img {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.preview-img .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* styles for image gallery section */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery .images {
+  gap: 20px;
+  max-width: 95%;
+  columns: 328px 5;
+  margin-top: 35px;
+}
+
+.images .card {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  list-style: none;
+  margin-bottom: 12.5px;
+  border-radius: 3.5px;
+}
+
+.images .card .details {
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: bottom 0.4s ease;
+  background: linear-gradient(to top, rgba(74, 106, 221, 0.9), transparent);
+}
+
+.images .card:hover .details {
+  bottom: 0;
+}
+
+.photographer {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.photographer i {
+  font-size: 1.475rem;
+  margin-right: 12px;
+}
+
+.details .photographer span {
+  font-size: 1.125rem;
+}
+
+.card .details button {
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #fff;
+  font-size: 1.125rem;
+}
+
+.images img {
+  width: 100%;
+}
+
+.gallery .load-more {
+  margin: 25px 0;
+  color: #fff;
+  cursor: pointer;
+  background: #0050bf;
+  padding: 5px 30px;
+  font-size: 1.125rem;
+  font-family: 'Alkatra', cursive;
+}
+
+.gallery .load-more.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}

@@ -19,9 +19,31 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <!-- styles -->
     <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
     <title>Image Gallery</title>
   </head>
   <body>
+    <!-- lightbox container -->
+    <div class="lightbox">
+      <div class="wrapper">
+        <header>
+          <div class="photographer">
+            <i class="uil uil-camera"></i>
+            <span></span>
+          </div>
+          <div class="buttons">
+            <i class="uil uil-import"></i>
+            <i class="uil uil-times"></i>
+          </div>
+        </header>
+        <div class="preview-img">
+          <div class="img">
+            <img src="" alt="preview-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- image search section -->
     <section class="search">
       <img src="images/search.jpg" alt="search" />
