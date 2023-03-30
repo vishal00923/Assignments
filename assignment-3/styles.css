@@ -248,3 +248,52 @@ header .buttons i {
   opacity: 0.6;
   pointer-events: none;
 }
+
+/* media queries for responsive layout */
+@media screen and (max-width: 414px) {
+  .lightbox .wrapper {
+    width: 68%;
+  }
+
+  .wrapper header {
+    flex-direction: column;
+  }
+
+  header .photographer i {
+    font-size: 1.275rem;
+  }
+
+  header .photographer span {
+    font-size: 0.825rem;
+  }
+
+  header .buttons i {
+    width: 28px;
+    height: 28px;
+    font-size: 0.875rem;
+    line-height: 30px;
+  }
+
+  .search {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .lightbox .wrapper {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .lightbox .wrapper {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .lightbox .wrapper {
+    width: 68%;
+  }
+}
