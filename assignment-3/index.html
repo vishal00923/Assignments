@@ -11,12 +11,34 @@
       href="https://fonts.googleapis.com/css2?family=Alkatra:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
-    <!-- css styles -->
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Image Gallery App</title>
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Image Gallery</title>
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <!-- image search section -->
+    <section class="search">
+      <img src="images/search.jpg" alt="search" />
+      <div class="content">
+        <h1>Image Gallery App</h1>
+        <p>Search and download any images</p>
+        <div class="search-box">
+          <i class="uil uil-search"></i>
+          <input type="text" placeholder="Search images..." />
+        </div>
+      </div>
+    </section>
+
+    <!-- image gallery section -->
+    <section class="gallery">
+      <ul class="images"></ul>
+      <button class="load-more">Load More</button>
+    </section>
   </body>
 </html>
