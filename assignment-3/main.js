@@ -1,4 +1,5 @@
 /* DOM manipulation */
+const overlay = document.querySelector('.overlay');
 const lightBox = document.querySelector('.lightbox');
 const imagesList = document.querySelector('.images');
 const loadMoreBtn = document.querySelector('.load-more');
@@ -20,12 +21,6 @@ const showLightbox = (name, imgUrl) => {
   downloadImageBtn.setAttribute('data-img', imgUrl);
   lightBox.classList.add('show');
   document.body.style.overflow = 'hidden';
-};
-
-/* close overlay and the lightbox modal */
-const closeOverlayAndLightbox = () => {
-  lightBox.classList.remove('show');
-  document.body.style.overflow = 'auto';
 };
 
 /* download the selected image */
@@ -115,10 +110,16 @@ searchInput.addEventListener('keyup', (e) => {
 });
 
 /* close lightbox when overlay is clicked */
-lightBox.addEventListener('click', closeOverlayAndLightbox);
+overlay.addEventListener('click', () => {
+  lightBox.classList.remove('show');
+  document.body.style.overflow = 'auto';
+});
 
 /* close lightbox when close button is clicked */
-closeLightboxBtn.addEventListener('click', closeOverlayAndLightbox);
+closeLightboxBtn.addEventListener('click', () => {
+  lightBox.classList.remove('show');
+  document.body.style.overflow = 'auto';
+});
 
 /* when lighbox download button is clicked */
 downloadImageBtn.addEventListener('click', (e) =>
